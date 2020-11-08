@@ -16,4 +16,11 @@
     <string name="etUsername">Username</string>
     <string name="etPasswordRepeat">Repeat Password</string>
     <string name="titleRegister">Register</string>
+    <string name="tvRestaurante1">Tony Roma\'s</string>
+    <string name="tvEndereco">Av. Lavandisca, 717 - Indianópolis, São Paulo</string>
+    <string name="tvHorario">Fecha às 22:00</string>
+    <string name="tvPratos">Pratos Principais</string>
+    <string name="tvNomePrato">Salada com Molho de Gengibre</string>
+    <string name="tvDescricaoPrato">Sed ut perspiciatis, unde omnis iste natus error sit voluptatem accusant doloremque laudantium, totam rem aperiam eaque ipsa, quae ab illo inventore veritatis.</string>
+    <string name="tvOr">OR</string>
 </resources>
