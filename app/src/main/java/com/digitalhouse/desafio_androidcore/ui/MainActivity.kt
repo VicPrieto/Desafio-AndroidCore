@@ -1,5 +1,6 @@
 package com.digitalhouse.desafio_androidcore.ui
 
+import android.content.Intent
 import android.os.Bundle
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
@@ -33,8 +34,8 @@ class MainActivity : AppCompatActivity(), RestauranteAdapter.OnRestauranteClickL
     }
 
     override fun restauranteClick(position: Int) {
-        val restaurante: Restaurante = listaRestaurantes.get(position)
-        adapter.notifyItemChanged(position)
+        var intent = Intent(this, CardapioActivity::class.java)
+        startActivity(intent)
     }
 
 }

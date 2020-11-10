@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.DetalheCardarioActivity">
+    tools:context=".ui.DetalheCardapioActivity">
 
     <ImageView
         android:id="@+id/ivRestaurante"
@@ -32,7 +32,7 @@
         android:fontFamily="@font/roboto_bold"
         android:text="@string/tvNomePrato"
         android:textColor="@color/colorWhite"
-        android:textSize="25sp"
+        android:textSize="22sp"
         app:layout_constraintBottom_toBottomOf="@+id/ivRestaurante"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.271"
