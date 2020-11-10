@@ -10,7 +10,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.digitalhouse.desafio_androidcore.R
 import kotlinx.android.synthetic.main.item_restaurante.view.*
 
-class RestauranteAdapter(private val listaRestaurantes: ArrayList<Restaurante>, val listener: OnRestauranteClickListener): RecyclerView.Adapter<RestauranteAdapter.RestauranteViewHolder>() {
+class RestauranteAdapter(private val listRestaurantes: ArrayList<Restaurante>, val listener: OnRestauranteClickListener): RecyclerView.Adapter<RestauranteAdapter.RestauranteViewHolder>() {
     override fun onCreateViewHolder(
         parent: ViewGroup,
         viewType: Int
@@ -19,8 +19,8 @@ class RestauranteAdapter(private val listaRestaurantes: ArrayList<Restaurante>, 
         return RestauranteViewHolder(itemView)
     }
 
-    override fun onBindViewHolder(holder: RestauranteViewHolder, position: Int) {
-        var restaurante = listaRestaurantes.get(position)
+    override fun onBindViewHolder(holder: RestauranteAdapter.RestauranteViewHolder, position: Int) {
+        var restaurante = listRestaurantes.get(position)
 
         holder.tvNome.text = restaurante.nome
         holder.tvEndereco.text = restaurante.endereco
@@ -32,7 +32,7 @@ class RestauranteAdapter(private val listaRestaurantes: ArrayList<Restaurante>, 
         fun restauranteClick(position: Int)
     }
 
-    override fun getItemCount() = listaRestaurantes.size
+    override fun getItemCount() = listRestaurantes.size
 
     inner class RestauranteViewHolder(itemView: View): RecyclerView.ViewHolder(itemView), View.OnClickListener {
         val tvNome: TextView = itemView.findViewById(R.id.tvNome)

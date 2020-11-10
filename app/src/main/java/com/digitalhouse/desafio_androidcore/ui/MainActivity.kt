@@ -34,9 +34,7 @@ class MainActivity : AppCompatActivity(), RestauranteAdapter.OnRestauranteClickL
 
     override fun restauranteClick(position: Int) {
         val restaurante: Restaurante = listaRestaurantes.get(position)
-        restaurante.nome = "deu certo"
         adapter.notifyItemChanged(position)
-//        Toast.makeText(this, restaurante.toString(), Toast.LENGTH_SHORT).show()
     }
 
 }
