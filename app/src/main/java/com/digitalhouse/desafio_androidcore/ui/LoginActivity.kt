@@ -1,5 +1,6 @@
 package com.digitalhouse.desafio_androidcore.ui
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.navigation.NavController
@@ -14,12 +15,23 @@ class LoginActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_login)
 
-//        btnLogin.setOnClickListener {
-//            navController.navigate(R.id.action_loginActivity_to_mainActivity)
-//        }
-//
-//        btnRegister.setOnClickListener {
-//            navController.navigate(R.id.action_loginActivity_to_cadastroActivity)
-//        }
+        btnLogin.setOnClickListener {
+            callMain()
+        }
+
+        btnRegister.setOnClickListener {
+            callCadastro()
+        }
     }
+
+    fun callCadastro(){
+        var intent = Intent(this, CadastroActivity::class.java)
+        startActivity(intent)
+    }
+
+    fun callMain(){
+        var intent = Intent(this, MainActivity::class.java)
+        startActivity(intent)
+    }
+
 }
