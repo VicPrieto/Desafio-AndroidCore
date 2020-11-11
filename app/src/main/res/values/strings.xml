@@ -23,4 +23,5 @@
     <string name="tvNomePrato">Salada com Molho de Gengibre</string>
     <string name="tvDescricaoPrato">Sed ut perspiciatis, unde omnis iste natus error sit voluptatem accusant doloremque laudantium, totam rem aperiam eaque ipsa, quae ab illo inventore veritatis.</string>
     <string name="tvOr">OR</string>
+    <string name="noTitle">" "</string>
 </resources>

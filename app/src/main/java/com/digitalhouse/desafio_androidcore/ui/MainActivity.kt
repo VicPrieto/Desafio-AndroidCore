@@ -8,6 +8,7 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import com.digitalhouse.desafio_androidcore.R
 import com.google.android.material.imageview.ShapeableImageView
 import com.google.android.material.shape.CornerFamily
+import kotlinx.android.synthetic.main.activity_cardapio.*
 import kotlinx.android.synthetic.main.activity_main.*
 
 
@@ -36,6 +37,7 @@ class MainActivity : AppCompatActivity(), RestauranteAdapter.OnRestauranteClickL
     override fun restauranteClick(position: Int) {
         var intent = Intent(this, CardapioActivity::class.java)
         startActivity(intent)
+
     }
 
 }

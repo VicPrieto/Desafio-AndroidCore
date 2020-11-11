@@ -16,14 +16,7 @@ class CadastroActivity : AppCompatActivity() {
             callMain()
         }
 
-        //todo toolbar backbutton
         val toolbar = setSupportActionBar(cadastroToolbar)
-//        toolbar.setNavigationIcon(ResourcesCompat.getDrawable(R.drawable.ic_arrow_back))
-    }
-
-    fun backLogin(){
-        var intent = Intent(this, LoginActivity::class.java)
-        startActivity(intent)
     }
 
     fun callMain(){

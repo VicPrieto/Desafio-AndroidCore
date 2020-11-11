@@ -8,6 +8,7 @@ import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.digitalhouse.desafio_androidcore.R
+import com.squareup.picasso.Picasso
 import kotlinx.android.synthetic.main.item_restaurante.view.*
 
 class RestauranteAdapter(private val listRestaurantes: ArrayList<Restaurante>, val listener: OnRestauranteClickListener): RecyclerView.Adapter<RestauranteAdapter.RestauranteViewHolder>() {
@@ -21,6 +22,7 @@ class RestauranteAdapter(private val listRestaurantes: ArrayList<Restaurante>, v
 
     override fun onBindViewHolder(holder: RestauranteAdapter.RestauranteViewHolder, position: Int) {
         var restaurante = listRestaurantes.get(position)
+//        Picasso.get().load(listRestaurantes[position].foto).into(holder.ivRestaurante)
 
         holder.tvNome.text = restaurante.nome
         holder.tvEndereco.text = restaurante.endereco
