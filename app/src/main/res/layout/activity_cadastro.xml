@@ -9,7 +9,7 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
         android:orientation="vertical">
 
         <androidx.appcompat.widget.Toolbar
@@ -80,14 +80,6 @@
             android:text="@string/btnRegister"
             android:textColor="@color/colorWhite"
             android:textSize="16sp" />
-
-<!--        <fragment-->
-<!--            android:id="@+id/navHostfragment"-->
-<!--            android:name="androidx.navigation.fragment.NavHostFragment"-->
-<!--            android:layout_width="match_parent"-->
-<!--            android:layout_height="match_parent"-->
-<!--            app:defaultNavHost="true"-->
-<!--            app:navGraph="@navigation/nav_graph" />-->
 
     </LinearLayout>
 

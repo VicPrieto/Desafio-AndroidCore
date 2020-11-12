@@ -36,8 +36,11 @@ class MainActivity : AppCompatActivity(), RestauranteAdapter.OnRestauranteClickL
 
     override fun restauranteClick(position: Int) {
         var intent = Intent(this, CardapioActivity::class.java)
+        var restaurante: Restaurante = listaRestaurantes.get(position)
+
+        intent.putExtra("imagem", restaurante.foto)
+        intent.putExtra("nome", restaurante.nome)
+
         startActivity(intent)
-
     }
-
 }

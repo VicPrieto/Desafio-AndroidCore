@@ -12,6 +12,16 @@ class DetalheCardapioActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_detalhe_cardapio)
 
+        val extras = intent.extras
+        var foto = extras?.getInt("imagem")
+        var nome = extras?.getString("nome")
+
+        if (foto != null) {
+            ivRestaurante.setImageResource(foto)
+        }
+        tvNomePrato.text = nome
+
+
         val toolbar = setSupportActionBar(detalheToolbar)
         getSupportActionBar()?.setDisplayShowTitleEnabled(false)
     }

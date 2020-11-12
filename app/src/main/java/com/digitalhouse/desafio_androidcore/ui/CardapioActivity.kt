@@ -18,6 +18,15 @@ class CardapioActivity : AppCompatActivity(), PratoAdapter.OnPratoClickListener 
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_cardapio)
 
+        val extras = intent.extras
+        var foto = extras?.getInt("imagem")
+        var nome = extras?.getString("nome")
+
+        tvNomeRestaurante.text = nome
+        if (foto != null) {
+            ivRestaurante.setImageResource(foto)
+        }
+
         rvPratos.adapter = adapter
         rvPratos.layoutManager = GridLayoutManager(this, 2)
         rvPratos.setHasFixedSize(true)
@@ -26,7 +35,7 @@ class CardapioActivity : AppCompatActivity(), PratoAdapter.OnPratoClickListener 
         getSupportActionBar()?.setDisplayShowTitleEnabled(false)
     }
 
-    fun getPratos(): ArrayList<Prato>{
+    fun getPratos(): ArrayList<Prato> {
         val prato1 = Prato("Salada com Molho de Gengibre", R.drawable.image4)
         val prato2 = Prato("Sopa de Picles", R.drawable.image2)
         val prato3 = Prato("Ovo e Waffle", R.drawable.image3)
@@ -39,6 +48,11 @@ class CardapioActivity : AppCompatActivity(), PratoAdapter.OnPratoClickListener 
 
     override fun pratoClick(position: Int) {
         var intent = Intent(this, DetalheCardapioActivity::class.java)
+        var prato: Prato = listaPratos.get(position)
+
+        intent.putExtra("imagem", prato.foto)
+        intent.putExtra("nome", prato.nome)
+
         startActivity(intent)
     }
 
