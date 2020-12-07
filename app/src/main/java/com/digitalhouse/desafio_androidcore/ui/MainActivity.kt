@@ -2,13 +2,9 @@ package com.digitalhouse.desafio_androidcore.ui
 
 import android.content.Intent
 import android.os.Bundle
-import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.digitalhouse.desafio_androidcore.R
-import com.google.android.material.imageview.ShapeableImageView
-import com.google.android.material.shape.CornerFamily
-import kotlinx.android.synthetic.main.activity_cardapio.*
 import kotlinx.android.synthetic.main.activity_main.*
 
 
